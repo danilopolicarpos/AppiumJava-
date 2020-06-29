@@ -5,11 +5,9 @@ package aula.stepsdefinitions;
 
 
 public class FirstSteps {
-    FirstScreen lista;
 
-    public FirstSteps() {
-        lista = new FirstScreen();
-    }
+    private FirstScreen lista = new FirstScreen();
+
 
     @Dado("^que estou na lista de filmes$")
     public void queEstouNaListaDeFilmes() throws Throwable {
