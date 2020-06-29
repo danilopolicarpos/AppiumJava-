@@ -15,8 +15,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(monochrome = true, snippets = SnippetType.CAMELCASE,
         features = "src/test/features",
         glue = "aula/stepsdefinitions",
-        tags = {"@teste","~@unit", "~@notIntegrated"},
-        plugin = {"io.qameta.allure.cucumberjvm.AllureCucumberJvm", "pretty"})
+        tags = {"@teste","~@unit", "~@notIntegrated"})
 
 
 public class CucumberRunner {
