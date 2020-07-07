@@ -24,7 +24,7 @@ public class AndroidCapabilities {
             desiredCapabilities.setCapability("automationName", "uiautomator2");
             desiredCapabilities.setCapability("deviceName", "emulador");
             desiredCapabilities.setCapability("avd", "oreo");
-            desiredCapabilities.setCapability("app", "/Users/danilopolicarpo/dev/app-debug.apk");
+            desiredCapabilities.setCapability("app", "/Users/danilopolicarpo/dev/AppiumJava-/app-debug.apk");
             driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
 
         }catch (MalformedURLException e){
