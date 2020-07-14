@@ -3,7 +3,6 @@ package aula.capabilities;
         import io.appium.java_client.AppiumDriver;
         import io.appium.java_client.MobileElement;
         import io.appium.java_client.android.AndroidDriver;
-        import org.junit.*;
         import java.net.MalformedURLException;
         import java.net.URL;
 
@@ -24,6 +23,7 @@ public class AndroidCapabilities {
             desiredCapabilities.setCapability("automationName", "uiautomator2");
             desiredCapabilities.setCapability("deviceName", "emulador");
             desiredCapabilities.setCapability("avd", "oreo");
+            desiredCapabilities.setCapability("fullReset", "true");
             desiredCapabilities.setCapability("app", "/Users/danilopolicarpo/dev/AppiumJava-/app-debug.apk");
             driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
 
@@ -42,10 +42,11 @@ public class AndroidCapabilities {
         return  driver;
     }
 
+
     public static void closeDriver(){
         driver.quit();
-
     }
+
 
 
 }

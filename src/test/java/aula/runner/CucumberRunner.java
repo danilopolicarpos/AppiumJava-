@@ -3,7 +3,9 @@ package aula.runner;
 import aula.capabilities.AndroidCapabilities;
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
+
 import cucumber.api.junit.Cucumber;
+
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -23,8 +25,8 @@ public class CucumberRunner {
     @BeforeClass
     public static void tearUp(){
         AndroidCapabilities.getDriver();
-
     }
+
 
     @AfterClass
     public static void tearDown(){

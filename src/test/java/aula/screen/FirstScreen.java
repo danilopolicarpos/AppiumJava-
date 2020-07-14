@@ -16,7 +16,7 @@ public class FirstScreen {
         PageFactory.initElements( new AppiumFieldDecorator(AndroidCapabilities.getDriver()), this );
     }
 
-    @WithTimeout(time = 5000, unit = TimeUnit.SECONDS)
+    @WithTimeout(time = 15000 , unit = TimeUnit.SECONDS)
     @AndroidFindBy(id = "home_omdb")
     private MobileElement tela_inicial;
 
@@ -26,6 +26,9 @@ public class FirstScreen {
     @AndroidFindBy(id = "search")
     private MobileElement btn_search;
 
+    @AndroidFindBy(id = "year")
+    private MobileElement ano;
+
 
     public void home() {
         this.tela_inicial.isDisplayed();
@@ -34,6 +37,11 @@ public class FirstScreen {
     public void digite_nome() {
         this.digite_nome.sendKeys("spider");
     }
+
+    public void ano() {
+        this.ano.sendKeys("1990");
+    }
+
 
     public void btn_search() {
         this.btn_search.click();
